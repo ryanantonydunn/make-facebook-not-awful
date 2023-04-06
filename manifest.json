@@ -13,7 +13,7 @@
       "js": ["js/content.js"]
     }
   ],
-  "permissions": ["storage", "activeTab", "declarativeContent"],
+  "permissions": ["storage", "activeTab"],
   "action": {
     "default_popup": "index.html",
     "default_icon": {

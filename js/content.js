@@ -34,11 +34,9 @@ function walkTree(storageItems) {
 }
 
 function init(storageItems) {
-  console.log(storageItems.suggested, storageItems.stories);
   if (!storageItems.suggested && !storageItems.stories) {
     return;
   }
-  console.log("active");
   const resizeObserver = new ResizeObserver((entries) => {
     walkTree(storageItems);
   });
@@ -49,7 +47,6 @@ function init(storageItems) {
 // pass all sync storage values into function
 window.onload = function () {
   chrome.storage.sync.get(null, (storageItems) => {
-    console.log("1", storageItems);
     init(storageItems);
   });
 };
